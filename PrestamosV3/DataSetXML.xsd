@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetXML" targetNamespace="http://tempuri.org/DataSetXML.xsd" xmlns:mstns="http://tempuri.org/DataSetXML.xsd" xmlns="http://tempuri.org/DataSetXML.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetXML" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetXML" msprop:Generator_UserDSName="DataSetXML">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtXML" msprop:Generator_TableClassName="dtXMLDataTable" msprop:Generator_TableVarName="tabledtXML" msprop:Generator_TablePropName="dtXML" msprop:Generator_RowDeletingName="dtXMLRowDeleting" msprop:Generator_RowChangingName="dtXMLRowChanging" msprop:Generator_RowEvHandlerName="dtXMLRowChangeEventHandler" msprop:Generator_RowDeletedName="dtXMLRowDeleted" msprop:Generator_UserTableName="dtXML" msprop:Generator_RowChangedName="dtXMLRowChanged" msprop:Generator_RowEvArgName="dtXMLRowChangeEvent" msprop:Generator_RowClassName="dtXMLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="clientenombre" msprop:Generator_ColumnVarNameInTable="columnclientenombre" msprop:Generator_ColumnPropNameInRow="clientenombre" msprop:Generator_ColumnPropNameInTable="clientenombreColumn" msprop:Generator_UserColumnName="clientenombre" type="xs:string" minOccurs="0" />
+              <xs:element name="clientedireccion" msprop:Generator_ColumnVarNameInTable="columnclientedireccion" msprop:Generator_ColumnPropNameInRow="clientedireccion" msprop:Generator_ColumnPropNameInTable="clientedireccionColumn" msprop:Generator_UserColumnName="clientedireccion" type="xs:string" minOccurs="0" />
+              <xs:element name="prestamoCuota" msprop:Generator_ColumnVarNameInTable="columnprestamoCuota" msprop:Generator_ColumnPropNameInRow="prestamoCuota" msprop:Generator_ColumnPropNameInTable="prestamoCuotaColumn" msprop:Generator_UserColumnName="prestamoCuota" type="xs:string" minOccurs="0" />
+              <xs:element name="prestamoMonto" msprop:Generator_ColumnVarNameInTable="columnprestamoMonto" msprop:Generator_ColumnPropNameInRow="prestamoMonto" msprop:Generator_ColumnPropNameInTable="prestamoMontoColumn" msprop:Generator_UserColumnName="prestamoMonto" type="xs:string" minOccurs="0" />
+              <xs:element name="prestamoDia" msprop:Generator_ColumnVarNameInTable="columnprestamoDia" msprop:Generator_ColumnPropNameInRow="prestamoDia" msprop:Generator_ColumnPropNameInTable="prestamoDiaColumn" msprop:Generator_UserColumnName="prestamoDia" type="xs:string" minOccurs="0" />
+              <xs:element name="clientedia" msprop:Generator_ColumnVarNameInTable="columnclientedia" msprop:Generator_ColumnPropNameInRow="clientedia" msprop:Generator_ColumnPropNameInTable="clientediaColumn" msprop:Generator_UserColumnName="clientedia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

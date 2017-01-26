@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="prestamosv3ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="prestamosv3ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PrestamosV3.Properties.Settings.GlobalReference.Default.prestamosv3ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="prestamosv3ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select clientes.clientenombre,clientes.clientedireccion,prestamos.prestamoCuota,prestamos.prestamoMonto,prestamos.prestamoDia,clientes.clientedia from prestamos inner join clientes on prestamos.idCliente=clientes.idclientes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="clientenombre" DataSetColumn="clientenombre" />
+              <Mapping SourceColumn="clientedireccion" DataSetColumn="clientedireccion" />
+              <Mapping SourceColumn="prestamoCuota" DataSetColumn="prestamoCuota" />
+              <Mapping SourceColumn="prestamoMonto" DataSetColumn="prestamoMonto" />
+              <Mapping SourceColumn="prestamoDia" DataSetColumn="prestamoDia" />
+              <Mapping SourceColumn="clientedia" DataSetColumn="clientedia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="clientenombre" msprop:Generator_ColumnVarNameInTable="columnclientenombre" msprop:Generator_ColumnPropNameInRow="clientenombre" msprop:Generator_ColumnPropNameInTable="clientenombreColumn" msprop:Generator_UserColumnName="clientenombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientedireccion" msprop:Generator_ColumnVarNameInTable="columnclientedireccion" msprop:Generator_ColumnPropNameInRow="clientedireccion" msprop:Generator_ColumnPropNameInTable="clientedireccionColumn" msprop:Generator_UserColumnName="clientedireccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prestamoCuota" msprop:Generator_ColumnVarNameInTable="columnprestamoCuota" msprop:Generator_ColumnPropNameInRow="prestamoCuota" msprop:Generator_ColumnPropNameInTable="prestamoCuotaColumn" msprop:Generator_UserColumnName="prestamoCuota" type="xs:float" minOccurs="0" />
+              <xs:element name="prestamoMonto" msprop:Generator_ColumnVarNameInTable="columnprestamoMonto" msprop:Generator_ColumnPropNameInRow="prestamoMonto" msprop:Generator_ColumnPropNameInTable="prestamoMontoColumn" msprop:Generator_UserColumnName="prestamoMonto" type="xs:float" minOccurs="0" />
+              <xs:element name="prestamoDia" msprop:Generator_ColumnVarNameInTable="columnprestamoDia" msprop:Generator_ColumnPropNameInRow="prestamoDia" msprop:Generator_ColumnPropNameInTable="prestamoDiaColumn" msprop:Generator_UserColumnName="prestamoDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="clientedia" msprop:Generator_ColumnVarNameInTable="columnclientedia" msprop:Generator_ColumnPropNameInRow="clientedia" msprop:Generator_ColumnPropNameInTable="clientediaColumn" msprop:Generator_UserColumnName="clientedia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
