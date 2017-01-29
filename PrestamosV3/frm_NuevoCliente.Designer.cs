@@ -53,7 +53,6 @@
             this.txtClienteCiudad = new System.Windows.Forms.TextBox();
             this.cbClienteDia = new System.Windows.Forms.ComboBox();
             this.txtClienteTel3 = new System.Windows.Forms.TextBox();
-            this.txtClienteAd1 = new System.Windows.Forms.TextBox();
             this.txtClienteComentarios = new System.Windows.Forms.TextBox();
             this.txtClienteDireccion = new System.Windows.Forms.TextBox();
             this.txtClienteTel2 = new System.Windows.Forms.TextBox();
@@ -68,6 +67,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtClienteAd1 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -246,12 +246,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtClienteAd1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtClienteAd2);
             this.groupBox1.Controls.Add(this.txtClienteCiudad);
             this.groupBox1.Controls.Add(this.cbClienteDia);
             this.groupBox1.Controls.Add(this.txtClienteTel3);
-            this.groupBox1.Controls.Add(this.txtClienteAd1);
             this.groupBox1.Controls.Add(this.txtClienteComentarios);
             this.groupBox1.Controls.Add(this.txtClienteDireccion);
             this.groupBox1.Controls.Add(this.txtClienteTel2);
@@ -324,14 +324,6 @@
             this.txtClienteTel3.Name = "txtClienteTel3";
             this.txtClienteTel3.Size = new System.Drawing.Size(100, 20);
             this.txtClienteTel3.TabIndex = 7;
-            // 
-            // txtClienteAd1
-            // 
-            this.txtClienteAd1.Location = new System.Drawing.Point(9, 136);
-            this.txtClienteAd1.MaxLength = 90;
-            this.txtClienteAd1.Name = "txtClienteAd1";
-            this.txtClienteAd1.Size = new System.Drawing.Size(203, 20);
-            this.txtClienteAd1.TabIndex = 8;
             // 
             // txtClienteComentarios
             // 
@@ -455,6 +447,14 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Nombre";
             // 
+            // txtClienteAd1
+            // 
+            this.txtClienteAd1.FormattingEnabled = true;
+            this.txtClienteAd1.Location = new System.Drawing.Point(9, 136);
+            this.txtClienteAd1.Name = "txtClienteAd1";
+            this.txtClienteAd1.Size = new System.Drawing.Size(203, 21);
+            this.txtClienteAd1.TabIndex = 44;
+            // 
             // frm_NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,6 +466,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_NuevoCliente";
             this.Text = "Nuevo Cliente";
+            this.Activated += new System.EventHandler(this.frm_NuevoCliente_Activated);
             this.Load += new System.EventHandler(this.frm_NuevoCliente_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -501,7 +502,6 @@
         private System.Windows.Forms.TextBox txtClienteCiudad;
         private System.Windows.Forms.ComboBox cbClienteDia;
         private System.Windows.Forms.TextBox txtClienteTel3;
-        private System.Windows.Forms.TextBox txtClienteAd1;
         private System.Windows.Forms.TextBox txtClienteComentarios;
         private System.Windows.Forms.TextBox txtClienteDireccion;
         private System.Windows.Forms.TextBox txtClienteTel2;
@@ -516,5 +516,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox txtClienteAd1;
     }
 }

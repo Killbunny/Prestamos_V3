@@ -13,6 +13,7 @@ namespace PrestamosV3
 {
     public partial class frm_NuevoCliente : Form
     {
+        DataTable tablaGrupos = new DataTable();
         public frm_NuevoCliente()
         {
             InitializeComponent();
@@ -53,8 +54,8 @@ namespace PrestamosV3
                 {
                     MessageBox.Show("No se registro nuevo cliente.\nEl nombre y direccion no pueden estar Vacíos \nDebe haber al menos un teléfono ");
                 }
-                
-                        
+
+            cargarGrupos();   
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -65,11 +66,36 @@ namespace PrestamosV3
         private void frm_NuevoCliente_Load(object sender, EventArgs e)
         {
             cbClienteDia.SelectedIndex = 0;
+            cargarGrupos();
+        }
+
+        private void cargarGrupos()
+        {
+            //1.- Crear la conexion, configurarla y abrirla
+            string conexion = SqlServerCSM.GetConnectionString("LocalMySqlServer");
+            MySqlConnection con = new MySqlConnection(conexion);
+            con.Open();
+            //2.- Configurar la consulta y ejecutarla
+            string consulta = "SELECT DISTINCT clienteadicional1 from prestamosv3.clientes";
+            MySqlDataAdapter da = new MySqlDataAdapter(consulta, con);
+            //3.- Extraer datos y manipularlos
+            // DataSet ds = new DataSet();
+            tablaGrupos.Clear();
+            da.Fill(tablaGrupos);
+            txtClienteAd1.DataSource = tablaGrupos;
+            txtClienteAd1.DisplayMember = "clienteadicional1";
+            txtClienteAd1.ValueMember = "clienteadicional1";
+            con.Close();
         }
 
         private void cbClienteDia_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void frm_NuevoCliente_Activated(object sender, EventArgs e)
+        {
+            cargarGrupos();
         }
     }
 }

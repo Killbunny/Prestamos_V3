@@ -253,7 +253,6 @@
     <None Include="prestamosv3DataSet.xss">
       <DependentUpon>prestamosv3DataSet.xsd</DependentUpon>
     </None>
-    <None Include="PrestamosV3_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
